@@ -93,6 +93,10 @@ total_cents = dollars * 100
 remaining_cents = nickels_count(total_cents)
 
 
+def cents_count(input_cents):
+    cent = input_cents // 1
+    return cent
+
 
 #Change calculator
 # [ ] Complete the function `coins_due` to calculate and print the change due to a customer in coins
@@ -130,8 +134,11 @@ def coins_due(amount_paid, item_price):
     dime = dimes_count(x - next_stage1)#13
     print(dime,'dime') 
     next_stage2 = dime * 10.0
-    nickel = nickels_count( x - next_stage1 + next_stage2) #3 #0
-    print(nickel+'nickel')
+    nickel = nickels_count( x - next_stage1 - next_stage2) #3 #0
+    print(nickel, 'nickel')
+    next_stage3 = nickel * 5.0
+    cent = cents_count( x - next_stage1 - next_stage2 - next_stage3 )
+    print(cent, 'cent')
     
     
 # Test case:

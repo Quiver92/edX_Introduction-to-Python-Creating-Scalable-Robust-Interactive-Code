@@ -27,10 +27,24 @@ for i in c:
 #In this exercise, you will write a program to randomly select a candy from a box.
 
 # [ ] Complete the function `pick_candy` so it returns a candy from box at random
+from random import choice 
 
 def pick_candy():
     box = ["Taffy", "Brownie", "Cookie", "Candy bar", "Chocolate", "Lollipop", "Gingerbread", "Marshmallow"]
-    #TODO
+    cho = choice(box)
+    return(cho)
 
 print(pick_candy())
+
+
+
+# [ ] Write a program to shuffle the following sorted list
+
+from random import shuffle
+
+lst = [3, 5, 9, 29, 35, 59, 62, 69, 102, 394, 594, 1993]
+
+shuffle(lst)
+
+print(lst)
 

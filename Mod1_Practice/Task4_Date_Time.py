@@ -55,8 +55,8 @@ print("European format:", european_format(d))
 # [ ] Write a program to display a list of all your birthdays from the day you were born till 2025.
 # You should also show the weekdays so you can see which of them was (or will be) on a weekend
 def bithday():
-    for i in range(1992, 2026):
-        every_year = datetime(year = i, month = 3, day = 20)
+    for i in range(1992, 2050):
+        every_year = datetime(year = i, month = 3, day = 30)
         format_year = every_year.strftime("%Y-%A-%m")
         print(format_year)
 bithday()

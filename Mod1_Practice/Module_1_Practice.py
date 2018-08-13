@@ -46,7 +46,7 @@ def name_generator():
     returns:
          `dir_name`: string containing a valid directory name
     """
-    dir_name = datetime.today().strftime("%m_%d_%Y_"+str(randint(0,1000000)))
+    dir_name = datetime.today().strftime("%m_%d_%y_"+str(randint(10000, 50000)))
     return dir_name
 
 def directory_creator(name):

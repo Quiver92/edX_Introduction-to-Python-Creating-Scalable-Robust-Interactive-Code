@@ -1,7 +1,11 @@
-lst = [14, 6, 5, 10, 6, 9, 33, 103, 21, 55]
+# Generate a staircase character art
+# Size controls the number of steps
+def char_art(steps):
+    for row in range(steps):
+        for col in range(steps):
+            if(col <= row):
+                print("[]", end = "")
+        print()
 
-for num in lst:
-    # Skip all even numbers
-    if (num % 2 == 0):
-        continue
-    print(num)
+# Generate a staircase with 6 steps                
+char_art(6)

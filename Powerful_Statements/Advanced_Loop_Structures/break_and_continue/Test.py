@@ -1,11 +1,9 @@
-# Generate a staircase character art
-# Size controls the number of steps
-def char_art(steps):
-    for row in range(steps):
-        for col in range(steps):
-            if(col <= row):
-                print("[]", end = "")
-        print()
+N = 5
 
-# Generate a staircase with 6 steps                
-char_art(6)
+for i in range(N):
+    for j in range(N):
+        if (i == j) or ((N - j -1) == i):
+            print('*', end = '')
+#        else:
+#            print(' ', end = '')
+    print('')

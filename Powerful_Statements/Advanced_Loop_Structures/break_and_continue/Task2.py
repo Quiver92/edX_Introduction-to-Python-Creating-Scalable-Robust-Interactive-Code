@@ -21,22 +21,15 @@ for row in table:
 
 def generate_star(size):
     for star in range(size):
-        print(star)
         for col in range(size):
-            print(col)
-            if (col == star):
-                space = col * " " 
-                print(space,"*",  end=" ")
-                print("*")
-#            elif (col == star):
-#                space = col * " "
-#                print(col,star,"*",  end=" " )
-
+            print(star,col)
+            if (col == star) or ((size - col -1) == star):
+                print("*",  end='')
+            else:
+                print(' ', end = '')
         print()
 
     pass
-
-
 # Display star
 generate_star(5)
 
